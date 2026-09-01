@@ -1121,9 +1121,6 @@ with tabs[3]:
 # =========================================================
 with tabs[4]:
 
-    coverage_df = pd.DataFrame(coverage, columns=["Status", "Requirement", "Implementation"])
-    st.dataframe(coverage_df, use_container_width=True, hide_index=True)
-
     # Outlier calculation
     q1 = filtered["Sales"].quantile(.25)
     q3 = filtered["Sales"].quantile(.75)
