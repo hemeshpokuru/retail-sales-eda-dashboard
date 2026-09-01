@@ -1120,34 +1120,6 @@ with tabs[3]:
 # TAB 5 — INSIGHTS & STATISTICS
 # =========================================================
 with tabs[4]:
-    st.markdown(
-        '<div class="section"><div class="section-kicker">05 • Decision support</div>'
-        '<div class="section-title">Business insights & statistical evidence</div></div>',
-        unsafe_allow_html=True,
-    )
-
-    # Assignment coverage — visible proof that the dashboard addresses the brief.
-    st.markdown(
-        '<div class="section"><div class="section-kicker">Assignment coverage</div>'
-        '<div class="section-title">Requirement-to-analysis checklist</div></div>',
-        unsafe_allow_html=True,
-    )
-
-    coverage = [
-        ("✓", "Data cleaning", "Null handling, duplicate removal, type conversion and consistency validation"),
-        ("✓", "Mean / median / standard deviation", "Top-two-city statistical comparison"),
-        ("✓", "Customer probability", "City-level probability table for the filtered customer population"),
-        ("✓", "Skewness", "Sales distribution shape reported numerically and interpreted"),
-        ("✓", "Monthly sales trend", "Interactive monthly sales and profit trajectory"),
-        ("✓", "Category-wise revenue", "Category revenue comparison"),
-        ("✓", "City-wise sales", "Top-city sales ranking"),
-        ("✓", "Box plot", "Sales distribution compared across categories"),
-        ("✓", "Top products / categories / cities", "Ranking views across the dashboard"),
-        ("✓", "Seasonality", "Average sales by calendar month"),
-        ("✓", "Outliers", "1.5×IQR detection, concentration and transaction-level investigation"),
-        ("✓", "5+ insights", "Eight automatically generated business insights"),
-        ("✓", "Recommendations", "Management actions tied to the observed findings"),
-    ]
 
     coverage_df = pd.DataFrame(coverage, columns=["Status", "Requirement", "Implementation"])
     st.dataframe(coverage_df, use_container_width=True, hide_index=True)
